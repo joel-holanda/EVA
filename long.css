@@ -11,7 +11,6 @@
 main {
   display: flex;   
   justify-content: center;
-  animation: corpo 2s ease infinite alternate;
 } 
 #corpo {
   height: 300px;
@@ -27,27 +26,33 @@ main {
   background-color: white;
   position: absolute;
   border-radius: 100%;
-  margin-top: 30px;
+  margin-top: 140px;
+  animation: cabeca 5s forwards ease-in-out;
 }
+
 #olho1 {
   width: 40px;
   height: 40px;
-  background-color: #0584E8;
+  background-color: #0584e8;
   border-radius: 100% 10%;
   position: absolute;
-  margin-top: 80px;
+  margin-top: 180px;
   margin-left: 50px;
-  transform: rotate(-10deg);
+  opacity: 0;
+  animation: olho1 5s forwards ease-in-out;
+  
 }
 #olho2 {
   width: 40px;
   height: 40px;
-  background-color:#0584E8;
+  background-color:#0584e8;
   border-radius: 100% 10%;
   position: absolute;
-  margin-top: 80px;
+  margin-top: 180px;
   margin-right: 50px;
-  transform: rotate(100deg);
+  transform: rotate(90deg);
+  opacity: 0;
+  animation: olho2 5s forwards ease-in-out;
 }
 #linha {
   width: 150px;
@@ -55,7 +60,9 @@ main {
   background-color: rgb(0, 0, 0);
   position: absolute;
   border-radius: 100%;
-  margin-top: 55px;
+  margin-top: 150px;
+  animation: linha 5s forwards ease-in-out;
+  
 }
 #mao1 {
   width: 50px;
@@ -63,9 +70,10 @@ main {
   background-color: rgb(255, 255, 255);
   border-radius: 100%;
   position: absolute;
-  transform: rotate(10deg);
-  margin-top: 200px;
-  margin-right: 280px;
+  margin-top: 230px;
+  margin-right: 130px;
+  animation: mao2 5s forwards ease-out;
+  animation-delay: 5s;
 }
 #mao2 {
   width: 50px;
@@ -73,9 +81,10 @@ main {
   background-color: rgb(255, 255, 255);
   border-radius: 100%;
   position: absolute;
-  transform: rotate(-10deg);
-  margin-top: 200px;
-  margin-left: 280px;
+  margin-top: 230px;
+  margin-left: 130px;
+  animation: mao1 5s forwards ease-out;
+  animation-delay: 5s;
 }
 #pe1 {
   width: 200px;
@@ -88,8 +97,37 @@ main {
 }
 
 
-@keyframes corpo {
+@keyframes mao1 {
   100%{
-    transform: translateY(10px);
+    transform: translateX(70px);
+
+  }
+}
+@keyframes mao2 {
+  100%{
+    transform: translateX(-70px);
+
+  }
+}
+@keyframes cabeca {
+  to {
+    margin-top: 30px;
+  }
+}
+@keyframes olho1 {
+  to {
+    opacity: 1;
+    margin-top: 80px;
+  }
+}
+@keyframes olho2 {
+  to {
+    margin-top: 80px;
+    opacity: 1;
+  }
+}
+@keyframes linha {
+  to {
+    margin-top: 50px;
   }
 }
