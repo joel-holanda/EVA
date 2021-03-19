@@ -64,27 +64,95 @@ main {
   animation: linha 5s forwards ease-in-out;
   
 }
+
+/*------   DEDOS  -----*/
+#dedo1 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-right: 100px;
+  animation: dedo1 5s forwards ease-in-out;
+  animation-delay: 2s;
+}
+#dedo2 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-right: 100px;
+  animation: dedo2 5s forwards ease-in-out;
+  animation-delay: 2s;
+}
+#dedo3 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-right: 100px;
+  animation: dedo3 5s forwards ease-in-out;
+  animation-delay: 2s;
+}#dedo4 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-left: 170px;
+  animation: dedo4 5s forwards ease-in-out;
+  animation-delay: 2s;
+}#dedo5 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-left: 150px;
+  animation: dedo5 5s forwards ease-in-out;
+  animation-delay: 2s;
+}#dedo6 {
+  width: 10px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 10% 10% 50% 50%;
+  margin-top: 300px;
+  margin-left: 130px;
+  animation: dedo6 5s forwards ease-in-out;
+  animation-delay: 2s;
+}
+/*---------------------------------*/
+
+
 #mao1 {
   width: 50px;
-  height: 200px;
+  height: 150px;
   background-color: rgb(255, 255, 255);
-  border-radius: 100%;
+  border-radius: 100% 100% 10% 10%;
   position: absolute;
   margin-top: 230px;
-  margin-right: 130px;
-  animation: mao2 5s forwards ease-out;
-  animation-delay: 5s;
+  margin-right: 100px;
+  animation: mao1 2s forwards ease-out;
+  animation-delay: 2s;
 }
 #mao2 {
   width: 50px;
-  height: 200px;
+  height: 150px;
   background-color: rgb(255, 255, 255);
-  border-radius: 100%;
+  border-radius: 100% 100% 10% 10%;
   position: absolute;
   margin-top: 230px;
-  margin-left: 130px;
-  animation: mao1 5s forwards ease-out;
-  animation-delay: 5s;
+  margin-left: 100px;
+  animation: mao2 2s forwards ease-out;
+  animation-delay: 2s;
 }
 #pe1 {
   width: 200px;
@@ -95,18 +163,39 @@ main {
   transform: rotate(180deg);
   margin-top: 510px;
 }
-
+#planta {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(10, 10, 10);
+  border-radius: 100%;
+  position: absolute;
+  margin-top: 250px;
+  margin-right: 80px;
+  opacity: 0;
+  animation: 5s planta forwards;
+  animation-delay: 5s;
+}
+button {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
 @keyframes mao1 {
   100%{
-    transform: translateX(70px);
-
+    margin-right: 270px;
   }
 }
 @keyframes mao2 {
   100%{
-    transform: translateX(-70px);
-
+    margin-left: 270px;
+  }
+}
+@keyframes planta {
+  100% {
+    opacity: 1;
   }
 }
 @keyframes cabeca {
@@ -129,5 +218,59 @@ main {
 @keyframes linha {
   to {
     margin-top: 50px;
+  }
+}
+@keyframes dedo1 {
+  30% {
+    margin-right: 280px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-right: 310px;
+  }
+}
+@keyframes dedo2 {
+  30% {
+    margin-right: 260px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-right: 270px;
+  }
+}
+@keyframes dedo3 {
+  30% {
+    margin-right: 250px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-right: 230px;
+  }
+}
+@keyframes dedo4 {
+  30% {
+    margin-left: 280px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-left: 310px;
+  }
+}
+@keyframes dedo5 {
+  30% {
+    margin-left: 260px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-left: 270px;
+  }
+}
+@keyframes dedo6 {
+  30% {
+    margin-left: 250px;
+  }
+  100% {
+    margin-top: 390px;
+    margin-left: 230px;
   }
 }
